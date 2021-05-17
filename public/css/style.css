@@ -1,0 +1,26 @@
+/*
+ * homepage style
+ */
+body
+{
+	background-color: lightsteelblue;
+}
+
+h1.title
+{
+    text-align: center;
+    font-size: 60px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+h2.link
+{
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+    color: darkred;
+}
