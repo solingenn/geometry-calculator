@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<h1 class="title">Result</h1>
+
+<div class="result">
+   <p>{{ message }}</p>
+</div>
+
+<form action="{{ path('triangle') }}">
+    <input type="submit" value="Back">
+</form>
+
+<form action="{{ path('homepage') }}">
+    <input type="submit" value="Homepage">
+</form>
+
+{% endblock %}
