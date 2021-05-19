@@ -29,6 +29,11 @@ div.introduction{
     font-size: 20px;
 }
 
+p.approach{
+    font-weight: 500;
+    color: darkred;
+}
+
 fieldset.parameter_form
 {
     margin: auto;

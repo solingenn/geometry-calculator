@@ -4,7 +4,7 @@ namespace App\Service;
 
 class CircleService
 {
-    public static function resultMessage(int $circleDiameter): string
+    public static function resultMessage(float $circleDiameter): string
     {
         return "The diameter of a circle is $circleDiameter cm.";
     }

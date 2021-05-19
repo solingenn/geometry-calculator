@@ -4,7 +4,7 @@ namespace App\Service;
 
 class TriangleService
 {
-    public static function resultMessage(int $triangleArea): string
+    public static function resultMessage($triangleArea): string
     {
         return "The area of a triangle is $triangleArea square cm.";
     }

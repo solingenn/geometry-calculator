@@ -43,7 +43,16 @@ class TriangleController extends AbstractController
         $sideB = (int) $request->get('side_b');
         $sideC = (int) $request->get('side_c');
 
-        $triangleArea = $triangleService->heronFormulaAreaCalculator($sideA, $sideB, $sideC);
+        $triangleArea = round($triangleService->heronFormulaAreaCalculator($sideA, $sideB, $sideC));
+
+        /* check if triangle side lenghts have correct dimensions
+         * A triangle is valid if sum of its two sides is greater than the third side
+         */
+        if (is_nan($triangleArea) || $triangleArea < 1) {
+            return $this->render('result_page.html.twig', [
+                'message' => 'Sides of a triangle are not valid.',
+            ]);
+        }
 
         return $this->render('result_page.html.twig', [
             'message' => TriangleService::resultMessage($triangleArea),
