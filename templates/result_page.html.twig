@@ -8,9 +8,7 @@
    <p>{{ message }}</p>
 </div>
 
-<form action="{{ path('triangle') }}">
-    <input type="submit" value="Back">
-</form>
+<input type="submit" value="Back" onclick="window.history.back();">
 
 <form action="{{ path('homepage') }}">
     <input type="submit" value="Homepage">

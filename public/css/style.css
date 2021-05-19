@@ -29,7 +29,7 @@ div.introduction{
     font-size: 20px;
 }
 
-fieldset.triangle_form
+fieldset.parameter_form
 {
     margin: auto;
     width: 300px;
@@ -49,7 +49,7 @@ input[type=number]{
 input[type=submit]{
     font-size: 15px;
     font-weight: bold;
-    width: 120px;
+    width: 160px;
     height: 40px;
     display: block;
     margin: 0 auto;

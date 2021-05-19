@@ -4,7 +4,7 @@ namespace App\Service;
 
 class TriangleService
 {
-    public static function resultMessage($triangleArea)
+    public static function resultMessage(int $triangleArea): string
     {
         return "The area of a triangle is $triangleArea square cm.";
     }
@@ -27,7 +27,7 @@ class TriangleService
      * Formula:
      * s = (sideA + sideB + sideC) / 2
      */
-    public function semiperimeterCalculator(int $sideA, int $sideB, int $sideC): int|float
+    private function semiperimeterCalculator(int $sideA, int $sideB, int $sideC): int|float
     {
         return ($sideA + $sideB + $sideC) / 2;
     }
@@ -40,7 +40,7 @@ class TriangleService
      * s = semiperimeter value
      * a = sgrt(s(s-a)(s-b)(S-c))
      */
-    public function heronFormula(int|float $semiperimeter, int $sideA, int $sideB, int $sideC): float
+    private function heronFormula(int|float $semiperimeter, int $sideA, int $sideB, int $sideC): float
     {
         return sqrt(
             $semiperimeter * (
