@@ -4,12 +4,22 @@ namespace App\Service;
 
 class TriangleService
 {
-    public static function resultMessage($triangleArea): string
+    /**
+     * @var int|float $triangleArea
+     * @return string
+     * 
+     * return result message with triangle area value
+     */
+    public static function resultMessage(int|float $triangleArea): string
     {
         return "The area of a triangle is $triangleArea square cm.";
     }
 
     /**
+     * @param int $base
+     * @param int $height
+     * @return int|float
+     * 
      * Calculate area of the triangle using
      * base and height of the triangle
      * 
@@ -22,17 +32,28 @@ class TriangleService
     }
 
     /**
+     * @param int $sideA
+     * @param int $sideB
+     * @param int $sideC
+     * @return int|float
+     * 
      * Calculate semiperimeter of the triangle for use in Heron's formula
      * 
      * Formula:
      * s = (sideA + sideB + sideC) / 2
      */
-    private function semiperimeterCalculator(int $sideA, int $sideB, int $sideC): int|float
+    protected function semiperimeterCalculator(int $sideA, int $sideB, int $sideC): int|float
     {
         return ($sideA + $sideB + $sideC) / 2;
     }
 
     /**
+     * @param int|float $semiperimeter
+     * @param int $sideA
+     * @param int $sideB
+     * @param int $sideC
+     * @return float
+     * 
      * Heron's formula for calculating triangle area with semiperimeter
      * and side lenghts
      * 
@@ -52,6 +73,11 @@ class TriangleService
     }
 
     /**
+     * @param int $sideA
+     * @param int $sideB
+     * @param int $sideC
+     * @return float
+     * 
      * Calculate area of the triangle using Heron's formula
      */
     public function heronFormulaAreaCalculator(int $sideA, int $sideB, int $sideC): float

@@ -4,12 +4,21 @@ namespace App\Service;
 
 class CircleService
 {
-    public static function resultMessage(float $circleDiameter): string
+    /**
+     * @param float $circleDiameter
+     * @return string
+     * 
+     * return result message with circle diameter value
+     */
+    public static function resultMessage(int $circleDiameter): string
     {
         return "The diameter of a circle is $circleDiameter cm.";
     }
 
     /**
+     * @param int $radius
+     * @return int
+     * 
      * Calculate circle diameter using radius
      * 
      * Formula:
